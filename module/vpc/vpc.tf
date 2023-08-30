@@ -129,15 +129,15 @@ output "my_vpc_id" {
   value       = aws_vpc.asim_vpc.id
 }
 
-output "private_subnet1_id" {
-  description = "Subnet ID"
-  value       = aws_subnet.asim_vpc_private_subnet_01.id
-}
+#output "private_subnet1_id" {
+#  description = "Subnet ID"
+#  value       = aws_subnet.asim_vpc_private_subnet_01.id
+#}
 
-output "private_subnet2_id" {
-  description = "Subnet ID"
-  value       = aws_subnet.asim_vpc_private_subnet_02.id
-}
+#output "private_subnet2_id" {
+#  description = "Subnet ID"
+#  value       = aws_subnet.asim_vpc_private_subnet_02.id
+#}
 
 output "public_subnet1_id" {
   description = "Subnet ID"

@@ -1,8 +1,8 @@
-variable "PATH_TO PUBLIC_KEY" {
-    default = "~/.ssh/asim_key.pub"
+variable "PATH_TO_PUBLIC_KEY" {
+    default = "./asim_key.pub"
 }
 
-variable "REGION" {
+variable "AWS_REGION" {
     default = "ap-south-1"
 }
 
@@ -27,5 +27,5 @@ variable "INSTANCE_USERNAME" {
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
-    default = "~/.ssh/asim_key"
+    default = "./asim_key"
 }
