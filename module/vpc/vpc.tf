@@ -8,7 +8,7 @@ data "aws_availability_zones" "available" {
 # MAIN VPC
 resource "aws_vpc" "asim_vpc" {
   cidr_block       = var.asim_vpc_cidr_block
-  instance_tenancy = default
+  instance_tenancy = "default"
   enable_dns_support = true
   enable_dns_hostnames = true
   tags = {
