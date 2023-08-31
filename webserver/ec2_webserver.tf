@@ -24,13 +24,11 @@ resource "aws_instance" "asim_instance" {
       source = "installNginx.sh"
       destination = "/tmp/installNginx.sh"
   }
-
   provisioner "remote-exec" {
     inline = [
-      "sudo chmod +x /tmp/installNginx.sh",
-      "sudo sed -i -e 's/\r$//' /tmp/installNginx.sh",
+      "chmod +x /tmp/installNginx.sh",
+      "sudo sed -i -e 's/\r$//' /tmp/installNginx.sh",  # Remove the spurious CR characters.
       "sudo /tmp/installNginx.sh",
-    ]
   }
 
   connection {
