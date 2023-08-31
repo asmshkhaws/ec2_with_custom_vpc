@@ -1,10 +1,3 @@
-module "asim_vpc" {
-    source      = "./module/vpc"
-
-    ENVIRONMENT = var.ENVIRONMENT
-    AWS_REGION  = var.AWS_REGION
-}
-
 module "asim-webserver" {
     source      = "./webserver"
     ENVIRONMENT = var.ENVIRONMENT
