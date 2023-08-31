@@ -20,6 +20,7 @@ resource "aws_vpc" "asim_vpc" {
 resource "aws_subnet" "asim_vpc_public_subnet_01" {
   vpc_id     = aws_vpc.asim_vpc.id
   cidr_block = var.asim_public_subnet01_cidr_block
+  map_public_ip_on_launch = "true"
   availability_zone = data.aws_availability_zones.available.names[0]
   tags = {
     Name = "${var.ENVIRONMENT}-asim-vpc-public-subnet01"
@@ -30,6 +31,7 @@ resource "aws_subnet" "asim_vpc_public_subnet_01" {
 resource "aws_subnet" "asim_vpc_public_subnet_02" {
   vpc_id     = aws_vpc.asim_vpc.id
   cidr_block = var.asim_public_subnet02_cidr_block
+  map_public_ip_on_launch = "true"
   availability_zone = data.aws_availability_zones.available.names[1]
   tags = {
     Name = "${var.ENVIRONMENT}-asim-vpc-public-subnet02"
